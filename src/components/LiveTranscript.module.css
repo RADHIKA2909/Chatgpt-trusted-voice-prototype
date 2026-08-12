@@ -1,0 +1,10 @@
+.paragraph {
+  font-size: var(--fs-transcript);
+  line-height: 1.7;
+  color: var(--ink);
+  word-wrap: break-word;
+}
+
+.token {
+  display: inline;
+}

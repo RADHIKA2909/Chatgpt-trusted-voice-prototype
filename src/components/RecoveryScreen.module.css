@@ -1,0 +1,114 @@
+.screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  animation: rise 380ms var(--ease-standard) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.center {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-12);
+  padding: 0 var(--sp-32);
+  text-align: center;
+}
+
+.iconCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--ink-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-8);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--fs-title);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: var(--fs-secondary);
+  color: var(--ink-secondary);
+  line-height: 1.5;
+}
+
+.actions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+  padding: var(--sp-16) var(--sp-24) var(--sp-24);
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  border-radius: var(--r-md);
+  padding: 14px;
+  font-size: var(--fs-button);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--dur-micro) var(--ease-standard);
+}
+
+.primaryButton:hover {
+  background: var(--green-active);
+}
+
+.secondaryButton {
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: var(--r-md);
+  padding: 14px;
+  font-size: var(--fs-button);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--surface);
+}
+
+.textButton {
+  border: none;
+  background: transparent;
+  color: var(--ink-secondary);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.textButton:hover {
+  color: var(--ink);
+}

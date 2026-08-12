@@ -1,0 +1,105 @@
+.wrap {
+  flex-shrink: 0;
+  padding: var(--sp-8) var(--sp-16) var(--sp-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+  background: var(--white);
+}
+
+.field {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--sp-8);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 9px 9px 9px 18px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  resize: none;
+  font-size: var(--fs-body);
+  color: var(--ink);
+  line-height: 1.4;
+  max-height: 90px;
+  padding: 5px 0;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: var(--ink-secondary);
+}
+
+.micButton,
+.sendButton {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform var(--dur-micro) var(--ease-standard),
+    background var(--dur-micro) var(--ease-standard);
+}
+
+.micButton {
+  background: var(--green);
+  color: var(--white);
+}
+
+.micButton:hover {
+  background: var(--green-active);
+}
+
+.micButton:active {
+  transform: scale(0.94);
+  background: var(--green-active);
+}
+
+.sendButton {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.sendButton:hover {
+  background: #050505;
+}
+
+.sendButton:active {
+  transform: scale(0.94);
+}
+
+.toolsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  padding-left: 4px;
+}
+
+.toolButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink-secondary);
+  border-radius: var(--r-pill);
+  padding: 6px 11px;
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.toolButton:hover {
+  border-color: #d5d5d5;
+  color: var(--ink);
+}

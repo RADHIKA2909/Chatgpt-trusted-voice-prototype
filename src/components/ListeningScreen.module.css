@@ -1,0 +1,59 @@
+.screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn var(--dur-screen) var(--ease-standard) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.center {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-20);
+  padding: 0 var(--sp-24);
+}
+
+.listeningLabel {
+  margin: 0;
+  font-size: var(--fs-secondary);
+  font-weight: 600;
+  color: var(--ink-secondary);
+  letter-spacing: 0.2px;
+}
+
+.ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+}
+
+.speakNow {
+  margin: 0;
+  font-size: var(--fs-title);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.subtitle {
+  margin: -12px 0 0;
+  font-size: var(--fs-secondary);
+  color: var(--ink-secondary);
+}

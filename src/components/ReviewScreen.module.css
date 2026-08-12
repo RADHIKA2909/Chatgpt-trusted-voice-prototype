@@ -1,0 +1,113 @@
+.screen {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn var(--dur-screen) var(--ease-standard) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card {
+  flex: 1;
+  min-height: 0;
+  margin: var(--sp-8) var(--sp-16) 0;
+  padding: var(--sp-16);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow-y: auto;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  border: none;
+  background: transparent;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  font-size: var(--fs-transcript);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.emptyState {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: var(--fs-secondary);
+  line-height: 1.6;
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+  padding: var(--sp-16) var(--sp-16) var(--sp-8);
+}
+
+.secondaryRow {
+  display: flex;
+  gap: var(--sp-8);
+}
+
+.secondaryButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: var(--r-md);
+  padding: 12px;
+  font-size: var(--fs-button);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--surface);
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  border-radius: var(--r-md);
+  padding: 14px;
+  font-size: var(--fs-button);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--dur-micro) var(--ease-standard),
+    transform var(--dur-micro) var(--ease-standard);
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: var(--green-active);
+}
+
+.primaryButton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.primaryButton:disabled {
+  background: var(--surface-2);
+  color: var(--ink-secondary);
+  cursor: not-allowed;
+}

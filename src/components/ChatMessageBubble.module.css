@@ -1,0 +1,127 @@
+.userRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3px var(--sp-16);
+}
+
+.userBubble {
+  max-width: 82%;
+  background: var(--surface-2);
+  color: var(--ink);
+  padding: 10px 15px;
+  border-radius: 18px 18px 4px 18px;
+  font-size: var(--fs-body);
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.assistantRow {
+  display: flex;
+  gap: 10px;
+  padding: 6px var(--sp-16);
+  align-items: flex-start;
+}
+
+.avatarSlot {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.assistantContent {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.assistantText {
+  margin: 0 0 var(--sp-8);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--ink);
+  white-space: pre-wrap;
+}
+
+.assistantText:last-child {
+  margin-bottom: 0;
+}
+
+.fileCard {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--r-md);
+  padding: 11px 14px;
+  margin: 6px 0 10px;
+  max-width: 280px;
+}
+
+.fileIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  color: var(--ink-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fileText {
+  flex: 1;
+  min-width: 0;
+}
+
+.fileName {
+  overflow-wrap: anywhere;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.fileMeta {
+  font-size: 12px;
+  color: var(--ink-secondary);
+  margin-top: 1px;
+}
+
+.typingDots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+}
+
+.typingDots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink-secondary);
+  opacity: 0.5;
+  animation: bounce 1.1s ease-in-out infinite;
+}
+
+.typingDots span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typingDots span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+}

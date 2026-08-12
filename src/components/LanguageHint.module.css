@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  gap: var(--sp-8);
+  padding: 0 var(--sp-16);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink-secondary);
+  font-size: var(--fs-micro);
+  font-weight: 500;
+  padding: 6px 13px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition:
+    background var(--dur-micro) var(--ease-standard),
+    border-color var(--dur-micro) var(--ease-standard),
+    color var(--dur-micro) var(--ease-standard);
+}
+
+.pill:hover {
+  border-color: #d5d5d5;
+}
+
+.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}

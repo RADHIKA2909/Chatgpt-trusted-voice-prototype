@@ -1,0 +1,62 @@
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-16);
+  padding-bottom: var(--sp-16);
+  padding-top: var(--sp-8);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-24);
+  padding: 0 var(--sp-24);
+}
+
+.secondaryButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background: var(--surface);
+}
+
+.stopButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    transform var(--dur-micro) var(--ease-standard),
+    background var(--dur-micro) var(--ease-standard);
+}
+
+.stopButton:hover {
+  background: var(--green-active);
+}
+
+.stopButton:active {
+  transform: scale(0.94);
+}
+
+.spacer {
+  width: 44px;
+  height: 44px;
+}

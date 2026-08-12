@@ -1,0 +1,47 @@
+.wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.compact {
+  height: 28px;
+}
+
+.large {
+  height: 64px;
+  gap: 4px;
+}
+
+.bar {
+  flex-shrink: 0;
+  width: 3px;
+  border-radius: var(--r-pill);
+  background: var(--green);
+  height: calc(var(--base, 0.5) * 100%);
+  opacity: 0.85;
+  transform-origin: center;
+}
+
+.large .bar {
+  width: 3.5px;
+}
+
+.animated {
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scaleY(0.55);
+    opacity: 0.55;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 0.95;
+  }
+}
